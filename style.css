@@ -70,9 +70,10 @@ body {
   background: #ffffff;
 }
 footer {
-  width: 1400px;
+  max-width: 1200px;
   margin: auto;
   height: 160px;
+
 }
 .footer-links {
   position: relative;
