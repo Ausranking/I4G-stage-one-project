@@ -3,10 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   width: 100%;
   min-height: 100vh;
 }
+
 .profile-section {
   max-width: 1152px;
   height: auto;
@@ -17,35 +19,48 @@ body {
   align-items: center;
   margin-top: 64px;
 }
+
 #profile-img {
   position: relative;
   display: inline-block;
 }
+
 #profile_img_two {
   position: absolute;
   top: 0;
 }
+
 #profile-img:hover #profile_img_two {
   display: block;
 }
-.icon {
+
+.icon #web-icon {
   position: absolute;
-  background: #eaecf0;
   width: 40px;
   height: 40px;
-  right: 350px;
+  right: 348px;
   top: 40px;
-  background: #ffffff;
-  border: 1px dashed #d0d5dd;
-  border-radius: 20px;
 }
-.icon img {
+
+.icon #mob-icon {
+  display: none;
   position: absolute;
-  left: 25.5%;
-  right: 11.53%;
-  top: 24.95%;
-  bottom: 14.95%;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  top: 40px;
 }
+
+@media screen and (max-width: 991px) {
+  .icon #mob-icon {
+    display: block;
+  }
+
+  .icon #web-icon {
+    display: none;
+  }
+}
+
 #twitter,
 #twitter a {
   text-align: center;
@@ -59,6 +74,7 @@ body {
   font-family: "Inter", sans-serif;
   text-decoration: none;
 }
+
 .link-container {
   display: flex;
   justify-content: center;
@@ -70,9 +86,11 @@ body {
   padding: 24px 32px;
   background: #eaecf0;
 }
+
 .link-container:hover {
   background: #d0d5dd;
 }
+
 #links a {
   font-size: 18px;
   font-family: "Inter", sans-serif;
@@ -82,6 +100,7 @@ body {
   height: 28px;
   line-height: 28px;
 }
+
 .social-selection {
   display: flex;
   justify-content: center;
@@ -93,23 +112,47 @@ body {
   height: 72px;
   background: #ffffff;
 }
+
 footer {
-  max-width: 1200px;
-  margin: auto;
-  height: 160px;
-}
-.footer-links {
   position: relative;
-  gap: 64px;
+  max-width: 1152px;
+  max-height: 160px;
+  padding-top: 24px;
   display: flex;
-  padding: 24px 0;
   margin: auto;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #eaecf0;
 }
-#vector {
-  position: absolute;
-  left: 52px;
-  top: 35px;
+
+@media (max-width: 768px) {
+  .profile-section {
+    max-width: 375px;
+    height: auto;
+    margin: 64px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link-container {
+    height: 68px;
+    max-width: 343px;
+  }
+
+  footer {
+    margin: 0 10px 10px;
+    width: 375px;
+    height: 196px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 320px) {
+  footer,
+  .link-container {
+    width: 300px;
+  }
 }
